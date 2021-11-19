@@ -3,17 +3,17 @@
 <div class=" col-12 col-md-3 col-lg-2 item <%= images[i].category %>">
     <% if(images[i].category != "sound") { %>
     <div class="card ">
-        <input type="text" value="<%= images[i].url %>">
-        <img src="<%= images[i].url %>" class="card-img-top" alt="...">
+        <input type="text" value="https://kassets.herokuapp.com/assets/<%= images[i].imageID %>">
+        <img src="https://kassets.herokuapp.com/assets/<%= images[i].imageID %>" class="card-img-top" alt="...">
         <div class="banner-<%= images[i].category %>"><%= images[i].name %></div>
 
     </div>
     <% } else {%>
     <div class="card">
         <input type="text"
-            value="<audio controls preload='metadata'><source src='<%= images[i].url %>'></audio>">
+            value="<audio controls preload='metadata'><source src='https://kassets.herokuapp.com/assets/<%= images[i].imageID %>'></audio>">
         <audio controls preload="metadata" class="center">
-            <source src="<%= images[i].url %>">
+            <source src="https://kassets.herokuapp.com/assets/<%= images[i].imageID %>">
         </audio>
         <div class="copy-button ">copy tag</div>
         <div class="banner-<%= images[i].category %>">

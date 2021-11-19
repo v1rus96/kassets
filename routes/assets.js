@@ -24,16 +24,11 @@ router.post("/upload", (req, res, next) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', (req, res) => {
   try {
-      const image = await Image.findOne({
-          imageID: req.params.id
-      })
-      if (url) {
-          return res.redirect(image.url)
-      } else {
-          return res.status(404).json('No URL Found')
-      }
+      Image.findOne({ imageID: req.params.id }).then(image => {
+         res.redirect(image.url)
+      });
   }
   catch (err) {
       console.error(err)
