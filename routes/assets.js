@@ -7,14 +7,21 @@ const shortid = require("shortid");
 router.get('/upload', (req, res) => res.render('upload'));
 router.post("/upload", (req, res, next) => {
   const { url, category, name } = req.body;
-  const image = new Image({
-    imageID: shortid.generate(),
-    name: name,
-    category: category,
-    url: url
-  });
-  image.save();
-  res.redirect("/");
+  if(!url || !category || !name) {
+    req.flash("error_msg", "Please fill all the fields");
+    res.redirect("/assets/upload");
+  }
+  else {
+    const image = new Image({
+      imageID: shortid.generate(),
+      name: name,
+      category: category,
+      url: url
+    });
+    image.save();
+    req.flash('success_msg', 'Image has been uploaded!');
+    res.redirect('/assets/upload');
+  }
 });
 
 router.get('/:id', async (req, res) => {
