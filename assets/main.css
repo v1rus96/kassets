@@ -1,0 +1,251 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #262626;
+}
+
+ul.filters {
+  display: block;
+  width: 100%;
+  margin: 0 0 3em 0;
+  padding: 30px 0;
+}
+
+ul.filters > li {
+  list-style: none;
+  display: inline-block;
+}
+
+ul.filters > li > a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 5px 20px;
+}
+
+ul.filters > li > a:hover {
+  background-color: white;
+  color: black;
+}
+
+ul.filters li.active > a {
+  color: black;
+  background-color: white;
+}
+
+.item {
+  height: 300px;
+  margin-bottom: 3em;
+  padding: 0 0.3em;
+}
+
+.item .card {
+  height: 100%;
+  border: none;
+  position: relative;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.item .card:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.item .card input {
+  position: absolute;
+  z-index: -1;
+}
+
+.item .card .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.384);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+}
+
+.item .card .overlay p {
+  color: white;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.item .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.item .card .banner-image {
+  position: absolute;
+  -webkit-filter: opacity(80%);
+          filter: opacity(80%);
+  text-transform: capitalize;
+  padding: 1em;
+  top: 0;
+  right: 0;
+  background-color: #33b04a;
+  border-bottom-left-radius: 5px;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.item .card .banner-background {
+  position: absolute;
+  -webkit-filter: opacity(80%);
+          filter: opacity(80%);
+  text-transform: capitalize;
+  padding: 1em;
+  top: 0;
+  right: 0;
+  background-color: #fcd30b;
+  border-bottom-left-radius: 5px;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.item .card .banner-transparent {
+  position: absolute;
+  -webkit-filter: opacity(80%);
+          filter: opacity(80%);
+  text-transform: capitalize;
+  padding: 1em;
+  top: 0;
+  right: 0;
+  background-color: #f16522;
+  border-bottom-left-radius: 5px;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.item .card .banner-gif {
+  position: absolute;
+  -webkit-filter: opacity(80%);
+          filter: opacity(80%);
+  text-transform: capitalize;
+  padding: 1em;
+  top: 0;
+  right: 0;
+  background-color: #ee3e34;
+  border-bottom-left-radius: 5px;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.item .card .banner-logo {
+  position: absolute;
+  -webkit-filter: opacity(80%);
+          filter: opacity(80%);
+  text-transform: capitalize;
+  padding: 1em;
+  top: 0;
+  right: 0;
+  background-color: purple;
+  border-bottom-left-radius: 5px;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.item .card .banner-sound {
+  position: absolute;
+  text-transform: capitalize;
+  padding: 0.3em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  right: 0;
+  background-color: #01a4df;
+  border-bottom-left-radius: 5px;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.item .card .banner-sound svg {
+  width: 15px;
+  margin: 0.5em 0 0.2em 0;
+}
+
+.transparent .card {
+  background-image: url(https://thumbs.dreamstime.com/b/transparent-designer-must-have-fake-background-39672616.jpg);
+}
+
+.transparent .card img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.sound .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+  background-color: #505050;
+  cursor: default;
+}
+
+.sound .card audio {
+  width: 90%;
+}
+
+.sound .card .copy-button {
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+  background-color: #33b04a;
+  z-index: 5;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.sound .card .copy-button:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+/*# sourceMappingURL=main.css.map */
