@@ -34,6 +34,13 @@ router.get('/:id', (req, res) => {
       console.error(err)
       res.status(500).json('Server Error')
   }
-})
+});
+
+
+router.get('/:id/remove', (req, res) => {
+  Image.deleteOne({ imageID: req.params.id }).then(image => {
+      res.redirect("/")
+  });
+});
 
 module.exports = router ;
