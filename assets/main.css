@@ -203,7 +203,30 @@ ul.filters li.active > a {
 }
 
 .transparent .card {
-  background-image: url(https://thumbs.dreamstime.com/b/transparent-designer-must-have-fake-background-39672616.jpg);
+  background-color: #101010;
+}
+
+.sound .card {
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/0587f251249217.58e7079c0894c.gif);
+  background-size: cover;
+}
+
+.logo .card {
+  background-color: #101010;
+}
+
+.gif .card {
+  background-color: #101010;
+}
+
+.gif .card img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.logo .card img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .transparent .card img {
